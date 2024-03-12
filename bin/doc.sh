@@ -33,20 +33,23 @@ gsed -i  "s/^  background-color: inherit;$/  background-color: #2196F3;/" doc/ap
 
 
 echo "Add Front matter on top of dartdoc pages"
-for f in $(find doc/api -name '*.html' )
+cd doc
+for f in $(find api -name '*.html' )
 do
         gsed -i  "1i ---" $f
+        gsed -i  "1i permalink: $f" $f
         gsed -i  "1i toc: true" $f
         gsed -i  "1i ---" $f
         gsed -i  "/^<script src=\"https:\/\/ajax\.googleapis\.com\/ajax\/libs\/jquery\/3\.2\.1\/jquery\.min\.js\"><\/script>$/d" $f
 done
 
+cd ..
 
 mv doc/api doc/pages
 
 cp -v README.md CHANGELOG.md LICENSE.md doc/pages
-cp -v README.md doc/pages/index.md
-gsed -i "s/^permalink: .*$/permalink: index.html/" doc/pages/index.md
+cp -v README.md doc/index.md
+gsed -i "s/^permalink: .*$/permalink: index.html/" doc/index.md
 
 echo "Building Jekyll doc"
 cd doc
@@ -62,10 +65,7 @@ fi
 
 cd ..
 
-
-
-
-exit 0
+cd doc/_site
 
 echo "Symbolic links of the API"
 echo "--------------------------"
@@ -77,9 +77,8 @@ do
             ln -s -v $rel/$d $dir
         done
 done
-ln -s -v readme.html index.html
+#ln -s -v readme.html index.html
 cd ../..
-
 
 
 cd doc

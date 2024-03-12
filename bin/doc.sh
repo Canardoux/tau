@@ -2,6 +2,7 @@
 
 VERSION=$1
 
+echo "***** doc.sh *****"
 rm -r doc/pages/api 2>/dev/null
 rm -r doc/_site/* 2>/dev/null
 rm -r doc/api 2>/dev/null
@@ -81,17 +82,31 @@ done
 cd ../..
 
 
-cd doc
-rm -rf example/build build
-tar czvf _toto3.tgz extract
-cd _site
-tar czvf ../../_toto.tgz *
+echo "Live web example"
+cd example
+rm -rf  build
+
+flutter build web
+if [ $? -ne 0 ]; then
+    echo "Error"
+    exit -1
+fi
+cd ..
+
+tar czv --no-xattrs -f _toto3.tgz extract
+cd doc/_site
+tar czv --no-xattrs -f ../../_toto.tgz *
 cd ../..
+cd example/build/web
+tar cvz  --no-xattrs -f ../../../_toto2.tgz *
+cd ../../..
 
-scp bin/doc2.sh canardoux@danku:/home/canardoux/bin
-scp _toto.tgz canardoux@danku:/home/canardoux
+
+scp bin/doc2.sh canardoux@danku:/home/canardoux
+scp _toto.tgz  canardoux@danku:/home/canardoux
 scp _toto3.tgz canardoux@danku:/home/canardoux
-ssh canardoux@danku "bash /home/canardoux/bin/doc2.sh"
-#rm _toto.tgz _toto2.tgz _toto3.tgz 2>/dev/null
+scp _toto2.tgz canardoux@danku:/home/canardoux
+ssh canardoux@danku "bash /home/canardoux/doc2.sh"
+rm _toto.tgz _toto2.tgz _toto3.tgz
 
-echo 'E.O.J'
+echo '***** doc.sh E.O.J ******'

@@ -12,23 +12,18 @@ export FLUTTER_ROOT=/opt/flutter
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
-rm -rf /tmp/toto_doc 2>/dev/null
-mkdir -v /tmp/toto_doc 2>/tmp/null
-tar xzf _toto.tgz -C /tmp/toto_doc 2>/dev/null
-tar xzf _toto3.tgz  -C /tmp/toto_doc 2>/dev/null
-rm -rf /tmp/toto_doc/_site /tmp/toto_doc/example/ios
+rm -rf /var/www/canardoux.xyz/tau/doc 2>/dev/null
+mkdir -v /var/www/canardoux.xyz/tau/doc 2>/tmp/null
+tar xvzf _toto.tgz -C /var/www/canardoux.xyz/tau/doc 2>/dev/null
+tar xvzf _toto3.tgz  -C /var/www/canardoux.xyz/tau/doc 2>/dev/null
 
 exit 0
 
 
-rm -rf /tmp/toto_doc/flutter_sound/example/ios/Pods 
+#rm -rf /tmp/toto_doc/flutter_sound/example/ios/Pods 
 
-rm -rf /var/www/canardoux.xyz/flutter-sound/*
-cp -a /tmp/toto_doc/_site/* /var/www/canardoux.xyz/flutter-sound/
-
-cd /var/www/canardoux.xyz/flutter-sound
-
-
+rm -rf /var/www/canardoux.xyz/tau/doc/*
+cp -a /tmp/toto_doc/_site/* /var/www/canardoux.xyz/tau/doc/
 
 cd /var/www/canardoux.xyz/flutter-sound
 #cd api/topics

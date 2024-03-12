@@ -2,7 +2,7 @@
 title:  "Tau README"
 description: "Tau README"
 summary: "The Tau README."
-permalink: README.html
+permalink: index.html
 tags: [Tau]
 keywords: Flutter, &tau;
 ---

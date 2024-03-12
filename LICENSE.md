@@ -1,3 +1,11 @@
+---
+title:  "Tau License"
+description: "Tau License"
+summary: "The permissive Tau License."
+permalink: LICENSE.html
+tags: [Tau]
+keywords: Flutter, &tau;
+---
 # Mozilla Public License
 
 Version 2.0

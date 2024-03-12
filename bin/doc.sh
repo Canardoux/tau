@@ -42,12 +42,14 @@ do
 done
 
 
+mv doc/api doc/pages
 
-
+cp -v README.md CHANGELOG.md LICENSE.md doc/pages
+cp -v README.md doc/pages/index.md
+gsed -i "s/^permalink: .*$/permalink: index.html/" doc/pages/index.md
 
 echo "Building Jekyll doc"
 cd doc
-rm home.md 2>/dev/null
 
 bundle config set --local path '~/vendor/bundle'
 bundle install
@@ -60,8 +62,11 @@ fi
 
 cd ..
 
-mv doc/api doc/_site
-cd doc/_site
+
+
+
+exit 0
+
 echo "Symbolic links of the API"
 echo "--------------------------"
 for dir in $(find api -type d)
@@ -75,13 +80,15 @@ done
 ln -s -v readme.html index.html
 cd ../..
 
-exit 0
 
+
+cd doc
 rm -rf example/build build
-tar czf _toto3.tgz extract
-cd doc/_site
-tar czf ../_toto.tgz *
+tar czvf _toto3.tgz extract
+cd _site
+tar czvf ../../_toto.tgz *
 cd ../..
+
 scp bin/doc2.sh canardoux@danku:/home/canardoux/bin
 scp _toto.tgz canardoux@danku:/home/canardoux
 scp _toto3.tgz canardoux@danku:/home/canardoux

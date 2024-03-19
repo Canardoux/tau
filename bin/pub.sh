@@ -1,0 +1,97 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+        echo "Correct usage is $0 <Version> "
+        exit -1
+fi
+
+
+
+VERSION=$1
+VERSION_CODE=${VERSION#./}
+VERSION_CODE=${VERSION_CODE#+/}
+
+bin/setvers.sh $VERSION
+# DEV mode to be able to do analyze
+bin/reldev.sh DEV
+
+flutter analyze lib
+if [ $? -ne 0 ]; then
+    echo "Error: analyze tau/lib"
+    exit -1
+fi
+
+bin/reldev.sh REL
+
+dart format lib
+if [ $? -ne 0 ]; then
+    echo "Error: format tau/lib"
+    exit -1
+fi
+
+rm -rf _*.tgz
+ 
+flutter pub publish
+if [ $? -ne 0 ]; then
+    echo "Error: flutter pub publish[tau]"
+    # We do not exit to ignore when the Tau Version is already published
+    #!!!!!!exit -1
+fi
+
+dart format  example/lib
+#dart doc lib
+#if [ $? -ne 0 ]; then
+#    echo "Error: dart doc tau/lib"
+#   #!!!!!exit -1
+#fi
+
+cd example
+flutter analyze lib
+if [ $? -ne 0 ]; then
+    echo "Error: analyze tau/example/lib"
+    exit -1
+fi
+cd ..
+
+
+
+
+cd example/ios
+pod cache clean --all
+rm Podfile.lock
+rm -rf .symlinks/
+cd ..
+flutter clean
+flutter pub get
+cd ios
+pod update
+pod repo update
+pod install --repo-update
+pod update
+pod install
+cd ..
+flutter build ios
+if [ $? -ne 0 ]; then
+    echo "Error: flutter build tau/example/ios"
+    exit -1
+fi
+
+# Bug in flutter tools : if "flutter build --release" we must first "--debug" and then "--profile" before "--release"
+#flutter build apk --release
+#if [ $? -ne 0 ]; then
+#    echo "Error: flutter build flutter_sound/example/apk"
+#    exit -1
+#fi
+
+bin/doc.sh $VERSION
+
+git add .
+git commit -m "TAU : Version $VERSION"
+git pull origin
+git push origin
+if [ ! -z "$VERSION" ]; then
+        git tag -f $VERSION
+        git push  -f origin $VERSION
+fi
+
+
+echo 'E.O.J'

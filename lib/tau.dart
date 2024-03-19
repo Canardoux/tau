@@ -1,4 +1,3 @@
-
 import 'tau_platform_interface.dart';
 
 class Tau {

@@ -16,7 +16,7 @@ fi
 flutter clean
 flutter pub get
 
-flutter analyze
+flutter analyze lib
 if [ $? -ne 0 ]; then
     echo "Error"
     exit -1

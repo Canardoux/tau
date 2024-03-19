@@ -9,10 +9,10 @@ topnav_title: "&tau; Documentation"
 site_title: The &tau; Project documentation.
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: Dooboolab
-# this appears in the footer
+company_name: Canardoux
+# this appears in the footer:
 
-github_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
+#github_editme_path: https://github.com/Canardoux/tau
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 # gitlab_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
@@ -35,7 +35,7 @@ exclude:
 
 feedback_subject_line: The &tau; Project documentation
 
-feedback_email: tau@canardoux.xyz
+feedback_email: larpoux@gmail.com
 # used as a contact email for the Feedback link in the top navigation bar
 
 # feedback_disable: true
@@ -48,7 +48,7 @@ feedback_email: tau@canardoux.xyz
 # if you uncomment the previous line, it changes where the feedback link points to
 
 
-TAU_VERSION: 6.4.9+1
+TAU_VERSION: 0.0.1
 
 highlighter: rouge
 # library used for syntax highlighting

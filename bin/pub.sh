@@ -20,7 +20,7 @@ if [ $? -ne 0 ]; then
     exit -1
 fi
 
-bin/reldev.sh REL
+# bin/reldev.sh REL
 
 dart format lib
 if [ $? -ne 0 ]; then
@@ -30,13 +30,6 @@ fi
 
 rm -rf _*.tgz
  
-flutter pub publish
-if [ $? -ne 0 ]; then
-    echo "Error: flutter pub publish[tau]"
-    # We do not exit to ignore when the Tau Version is already published
-    #!!!!!!exit -1
-fi
-
 dart format  example/lib
 #dart doc lib
 #if [ $? -ne 0 ]; then
@@ -44,36 +37,56 @@ dart format  example/lib
 #   #!!!!!exit -1
 #fi
 
+flutter clean
+flutter pub get
+
 cd example
+flutter clean
+flutter pub get
+
 flutter analyze lib
 if [ $? -ne 0 ]; then
     echo "Error: analyze tau/example/lib"
     exit -1
 fi
-cd ..
-
-
-
-
-cd example/ios
+cd ios
 pod cache clean --all
 rm Podfile.lock
 rm -rf .symlinks/
-cd ..
-flutter clean
-flutter pub get
-cd ios
 pod update
 pod repo update
 pod install --repo-update
 pod update
 pod install
 cd ..
+
 flutter build ios
 if [ $? -ne 0 ]; then
     echo "Error: flutter build tau/example/ios"
     exit -1
 fi
+
+flutter build apk
+if [ $? -ne 0 ]; then
+    echo "Error: flutter build tau/example/android"
+    exit -1
+fi
+
+flutter build web
+if [ $? -ne 0 ]; then
+    echo "Error: flutter build tau/example/android"
+    exit -1
+fi
+
+cd ..
+
+flutter pub publish
+if [ $? -ne 0 ]; then
+    echo "Error: flutter pub publish[tau]"
+    # We do not exit to ignore when the Tau Version is already published
+    #!!!!!!exit -1
+fi
+
 
 # Bug in flutter tools : if "flutter build --release" we must first "--debug" and then "--profile" before "--release"
 #flutter build apk --release

@@ -11,7 +11,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # Both the version and the builder number may be overridden in flutter
 # build by specifying --build-name and --build-number, respectively.
 # Read more about versioning at semver.org.
-version: 0.0.1
+version: 0.0.2
 
 homepage: https://tau-doc.canardoux.xyz/
 
@@ -29,7 +29,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  tau: # ^0.0.1
+  tau: # ^0.0.2
     # When depending on this package from a real application you should use:
     #   tau: ^x.y.z
     # See https://dart.dev/tools/pub/dependencies#version-constraints

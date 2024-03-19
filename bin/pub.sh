@@ -80,6 +80,8 @@ fi
 
 cd ..
 
+bin/doc.sh $VERSION
+
 flutter pub publish
 if [ $? -ne 0 ]; then
     echo "Error: flutter pub publish[tau]"
@@ -95,7 +97,6 @@ fi
 #    exit -1
 #fi
 
-bin/doc.sh $VERSION
 
 git add .
 git commit -m "TAU : Version $VERSION"

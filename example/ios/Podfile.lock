@@ -2,7 +2,7 @@ PODS:
   - Flutter (1.0.0)
   - integration_test (0.0.1):
     - Flutter
-  - tau (0.0.1):
+  - tau (0.0.2):
     - Flutter
 
 DEPENDENCIES:
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   integration_test: 13825b8a9334a850581300559b8839134b124670
-  tau: 108a9ead83bbc600c7bd8ee71bbeaa0328827b52
+  tau: be50503132fcb66e7680b48f813286340c0c9ad7
 
 PODFILE CHECKSUM: beab77b38961de946f08660e554f80ac174dc842
 

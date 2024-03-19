@@ -48,7 +48,7 @@ feedback_email: larpoux@gmail.com
 # if you uncomment the previous line, it changes where the feedback link points to
 
 
-TAU_VERSION: 0.0.1
+TAU_VERSION: 0.0.2
 
 highlighter: rouge
 # library used for syntax highlighting

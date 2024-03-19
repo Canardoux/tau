@@ -1,4 +1,4 @@
-## 0.0.1
+## 0.0.2
 
-- ## The [Tau CHANGELOG file is here](https://tau.canardoux.xyz/changelog.html)
+- ## The [Tau CHANGELOG file is here](https://tau.canardoux.xyz/CHANGELOG.html)
 

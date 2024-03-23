@@ -15,4 +15,12 @@ class MethodChannelTau extends TauPlatform {
         await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
+  
+  @override
+  AudioContext? audioContext() => null; // TODO
+  
+  @override
+  MediaElementAudioSourceNode? mediaElementAudioSourceNode() => null; // TODO
+
+
 }

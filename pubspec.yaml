@@ -1,8 +1,15 @@
 name: tau
-description: "A flutter port of the Web Audio API (WAA). Audio player, audio recorderm Flutter-Sound."
+description: "A flutter port of the Web Audio API (WAA). Audio player, audio recorder, Flutter-Sound."
 version: 0.0.2
 homepage: https://tau-doc.canardoux.xyz/README.html
 repository: https://github.com/canardoux/tau
+issue_tracker: https://github.com/pichillilorenzo/flutter_inappwebview/issues
+topics:
+  - html
+  - webview
+  - webview-flutter
+  - inappwebview
+  - browser
 
 environment:
   sdk: '>=3.3.1 <4.0.0'
@@ -52,7 +59,7 @@ flutter:
         pluginClass: TauWeb
         fileName: tau_web.dart
 
-  # To add assets to your plugin package, add an assets section, like this:
+# To add assets to your plugin package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

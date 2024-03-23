@@ -1,0 +1,35 @@
+PODS:
+  - flutter_inappwebview_macos (0.0.1):
+    - FlutterMacOS
+    - OrderedSet (~> 5.0)
+  - FlutterMacOS (1.0.0)
+  - OrderedSet (5.0.0)
+  - tau (0.0.1):
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - flutter_inappwebview_macos (from `Flutter/ephemeral/.symlinks/plugins/flutter_inappwebview_macos/macos`)
+  - FlutterMacOS (from `Flutter/ephemeral`)
+  - tau (from `Flutter/ephemeral/.symlinks/plugins/tau/macos`)
+
+SPEC REPOS:
+  trunk:
+    - OrderedSet
+
+EXTERNAL SOURCES:
+  flutter_inappwebview_macos:
+    :path: Flutter/ephemeral/.symlinks/plugins/flutter_inappwebview_macos/macos
+  FlutterMacOS:
+    :path: Flutter/ephemeral
+  tau:
+    :path: Flutter/ephemeral/.symlinks/plugins/tau/macos
+
+SPEC CHECKSUMS:
+  flutter_inappwebview_macos: 9600c9df9fdb346aaa8933812009f8d94304203d
+  FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
+  OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
+  tau: 143e0a11f4ee33239ec1035abceb185d638ce7a0
+
+PODFILE CHECKSUM: e6941affa76272697b93766f7a7df72c8e5d2cb8
+
+COCOAPODS: 1.15.2

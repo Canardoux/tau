@@ -2,6 +2,16 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'tau_method_channel.dart';
 
+
+abstract class AudioContext
+{
+  /* Factories */
+  MediaElementAudioSourceNode? mediaElementAudioSourceNode();
+}
+
+abstract class   MediaElementAudioSourceNode
+{}
+
 abstract class TauPlatform extends PlatformInterface {
   /// Constructs a TauPlatform.
   TauPlatform() : super(token: _token);
@@ -26,4 +36,8 @@ abstract class TauPlatform extends PlatformInterface {
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
+  /* Factories */
+  AudioContext? audioContext() ;
+  //MediaElementAudioSourceNode mediaElementAudioSourceNode();
 }

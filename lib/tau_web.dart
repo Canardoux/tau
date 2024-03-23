@@ -23,4 +23,14 @@ class TauWeb extends TauPlatform {
     final version = html.window.navigator.userAgent;
     return version;
   }
+  
+  /* factories */
+
+  @override
+  AudioContext? audioContext() => null; // TODO
+
+  @override
+  MediaElementAudioSourceNode? mediaElementAudioSourceNode() => null; // TODO
+
+
 }

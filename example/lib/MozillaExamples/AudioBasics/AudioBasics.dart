@@ -29,7 +29,7 @@
 
 import 'package:flutter/material.dart';
 import 'dart:async';
-
+import 'dart:html';
 import 'package:flutter/services.dart';
 
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -45,7 +45,7 @@ class AudioBasics extends StatefulWidget {
 
 class _AudioBasics extends State<AudioBasics> {
   final _tauPlugin = Tau();
-  String _platformVersion = 'Unknown';
+  //String _platformVersion = 'Unknown';
 
 
   // instigate our audio context
@@ -61,6 +61,7 @@ class _AudioBasics extends State<AudioBasics> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
+    /*
     try {
       platformVersion =
           await _tauPlugin.getPlatformVersion() ?? 'Unknown platform version';
@@ -68,24 +69,17 @@ class _AudioBasics extends State<AudioBasics> {
       platformVersion = 'Failed to get platform version.';
     }
 
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-    setState(() {
-      _platformVersion = platformVersion;
-    });
-  }
+     */
 
-  void init()
-  {
     audioCtx = _tauPlugin.audioContext();
-    track = audioCtx!.mediaElementAudioSourceNode(/* TODO : mediaElement param */);
+    //var mediaElement = querySelector('audio');
+    var mediaElement = AudioElement();
+    track =  audioCtx!.mediaElementAudioSourceNode({'mediaElement': mediaElement, 'src': "outfoxing.mp3", 'crossorigin': 'anonymous'});
 
     // Create the node that controls the volume.
-    /* TODO
-    const gainNode = audioCtx!.gainNode();
 
+     GainNode? gainNode = audioCtx!.gainNode();
+    /* TODO
     const volumeControl = document.querySelector('[data-action="volume"]');
     volumeControl.addEventListener(
         "input",
@@ -107,10 +101,21 @@ class _AudioBasics extends State<AudioBasics> {
         false
     );
 
-    // connect our graph
-    track.connect(gainNode).connect(panner).connect(audioCtx.destination);
 */
+    // connect our graph
+    track!.connectNode(audioCtx!.destination!);
+
+
+
+    // If the widget was removed from the tree while the asynchronous platform
+    // message was in flight, we want to discard the reply rather than calling
+    // setState to update our non-existent appearance.
+    if (!mounted) return;
+    setState(() {
+      //_platformVersion = platformVersion;
+    });
   }
+
   void hitPlayButton()
   {
     /* TODO
@@ -178,9 +183,7 @@ class _AudioBasics extends State<AudioBasics> {
                 Icons.play_arrow,
                 color: Colors.black,
               ),
-              onPressed: () {
-                // do something
-              },
+              onPressed: hitPlayButton,
 
             ),
             IconButton(

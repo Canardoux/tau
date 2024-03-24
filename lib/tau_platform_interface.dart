@@ -2,15 +2,47 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'tau_method_channel.dart';
 
+/*
+AudioNode <- AudioDestinationNode        <- WebAudioDestinationNode
+                                            [WebAudioNode]
 
+          <- GainNode                    <- WebAudioGainNode
+          <- MediaElementAudioSourceNode <- WebMediaElementAudioSourceNode
+*/
 abstract class AudioContext
 {
+  //AudioDestinationNode _audioDestinationNode = AudioDestinationNode();
+
   /* Factories */
-  MediaElementAudioSourceNode? mediaElementAudioSourceNode();
+  MediaElementAudioSourceNode mediaElementAudioSourceNode(Map options);
+  GainNode? gainNode();
+  AudioDestinationNode?  destination;
 }
 
-abstract class   MediaElementAudioSourceNode
-{}
+abstract class AudioNode
+{
+  AudioContext _ctx;
+  /* ctor */ AudioNode(AudioContext ctx) : _ctx=ctx
+  {
+    //_ctx = ctx;
+  }
+  void connectNode(AudioNode destination, [int output = 0, int input = 0]);
+}
+
+abstract class AudioDestinationNode extends AudioNode
+{
+  /* ctor */ AudioDestinationNode(AudioContext ctx) : super(ctx){}
+}
+
+abstract class GainNode extends AudioNode
+{
+  /* ctor */ GainNode(AudioContext ctx) : super(ctx){}
+}
+abstract class   MediaElementAudioSourceNode extends AudioNode
+{
+  /* ctor */ MediaElementAudioSourceNode(AudioContext ctx) : super(ctx){}
+
+}
 
 abstract class TauPlatform extends PlatformInterface {
   /// Constructs a TauPlatform.

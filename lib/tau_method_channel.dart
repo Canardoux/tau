@@ -20,7 +20,9 @@ class MethodChannelTau extends TauPlatform {
   AudioContext? audioContext() => null; // TODO
   
   @override
-  MediaElementAudioSourceNode? mediaElementAudioSourceNode() => null; // TODO
+  MediaElementAudioSourceNode? mediaElementAudioSourceNode(Map options) => null; // TODO
 
+  @override
+  GainNode? gainNode() => null; // TODO
 
 }

@@ -73,8 +73,12 @@ class _AudioBasics extends State<AudioBasics> {
 
     audioCtx = _tauPlugin.audioContext();
     //var mediaElement = querySelector('audio');
+    //Map param = {'src': "outfoxing.mp3", 'crossorigin': 'anonymous'};
     var mediaElement = AudioElement();
-    track =  audioCtx!.mediaElementAudioSourceNode({'mediaElement': mediaElement, 'src': "outfoxing.mp3", 'crossorigin': 'anonymous'});
+    mediaElement.src = 'outfoxing.mp3';
+    mediaElement.crossOrigin = 'anonymous';
+    //mediaElement['src'] =  "outfoxing.mp3";
+    track =  audioCtx!.mediaElementAudioSourceNode({'mediaElement': mediaElement, });
 
     // Create the node that controls the volume.
 
@@ -219,7 +223,7 @@ class _AudioBasics extends State<AudioBasics> {
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    
+
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
   <!-- Load flutter_inappwebview web_support js library -->
@@ -623,8 +627,8 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 }
 
 </style>
-</head> 
-<body> 
+</head>
+<body>
 
       <div id="boombox">
       <div class="boombox-handle"></div>
@@ -686,7 +690,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
       </div>
       <!-- boombox-body -->
     </div>
-    
+
    <script type="text/javascript">
       //console.clear();
 
@@ -701,7 +705,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
       );
 
   </script>
-  </body> 
+  </body>
 </html>
 
 

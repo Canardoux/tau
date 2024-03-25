@@ -11,13 +11,20 @@ AudioNode <- AudioDestinationNode        <- WebAudioDestinationNode
 */
 abstract class AudioContext
 {
-  //AudioDestinationNode _audioDestinationNode = AudioDestinationNode();
-
-  /* Factories */
-  MediaElementAudioSourceNode mediaElementAudioSourceNode(Map options);
+  AudioDestinationNode? _destination;
   GainNode? gainNode();
   //AudioDestinationNode?  destination;
-  AudioDestinationNode get destination;
+  AudioDestinationNode get destination
+  {
+    if (_destination == null) // late initialisation
+        {
+      _destination = audioDestinationNode();
+    }
+    return _destination!;
+  }
+  /* Factories */
+  MediaElementAudioSourceNode mediaElementAudioSourceNode(Map options);
+ AudioDestinationNode audioDestinationNode();
 }
 
 abstract class AudioNode

@@ -16,7 +16,8 @@ abstract class AudioContext
   /* Factories */
   MediaElementAudioSourceNode mediaElementAudioSourceNode(Map options);
   GainNode? gainNode();
-  AudioDestinationNode?  destination;
+  //AudioDestinationNode?  destination;
+  AudioDestinationNode get destination;
 }
 
 abstract class AudioNode

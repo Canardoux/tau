@@ -50,14 +50,14 @@ class _AudioBasics extends State<AudioBasics> {
 
   // instigate our audio context
   AudioContext? audioCtx;
-
   // load some sound
   //!!!!!!const audioElement = document.querySelector("audio");
   MediaElementAudioSourceNode? track;
+  var mediaElement = AudioElement();
 
 
   // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
+  void initPlatformState()  {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
@@ -74,7 +74,6 @@ class _AudioBasics extends State<AudioBasics> {
     audioCtx = _tauPlugin.audioContext();
     //var mediaElement = querySelector('audio');
     //Map param = {'src': "outfoxing.mp3", 'crossorigin': 'anonymous'};
-    var mediaElement = AudioElement();
     mediaElement.src = 'outfoxing.mp3';
     mediaElement.crossOrigin = 'anonymous';
     //mediaElement['src'] =  "outfoxing.mp3";
@@ -122,31 +121,32 @@ class _AudioBasics extends State<AudioBasics> {
 
   void hitPlayButton()
   {
-    /* TODO
-    if (!audioCtx) {
-      init();
+    if (audioCtx == null) {
+      initPlatformState();
     }
 
     // check if context is in suspended state (autoplay policy)
-    if (audioCtx.state === "suspended") {
-      audioCtx.resume();
+    if (audioCtx!.state == 'suspended') {
+      audioCtx!.resume();
     }
-
-    if (playButton.dataset.playing === "false") {
+    mediaElement.play();
+    /*
+    if (playButton.dataset.playing == "false") {
       audioElement.play();
       playButton.dataset.playing = "true";
       // if track is playing pause it
-    } else if (playButton.dataset.playing === "true") {
+    } else if (playButton.dataset.playing == "true") {
       audioElement.pause();
       playButton.dataset.playing = "false";
     }
 
-    // Toggle the state between play and not playing
-    let state =
-    playButton.getAttribute("aria-checked") === "true" ? true : false;
-  playButton.setAttribute("aria-checked", state ? "false" : "true");
-
      */
+
+    // Toggle the state between play and not playing
+    // TODO let state =
+    //playButton.getAttribute("aria-checked") == "true" ? true : false;
+  //playButton.setAttribute("aria-checked", state ? "false" : "true");
+
   }
   @override
   void initState() {

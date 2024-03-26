@@ -16,12 +16,16 @@ abstract class AudioContext
   //AudioDestinationNode?  destination;
   AudioDestinationNode get destination
   {
-    if (_destination == null) // late initialisation
+    if (_destination == null) // lazzy initialisation
         {
       _destination = audioDestinationNode();
     }
     return _destination!;
   }
+
+  String? get state;
+  Future resume() ;
+
   /* Factories */
   MediaElementAudioSourceNode mediaElementAudioSourceNode(Map options);
  AudioDestinationNode audioDestinationNode();

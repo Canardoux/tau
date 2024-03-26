@@ -37,7 +37,8 @@ class WebAudioDestinationNode extends WebAudioNode implements AudioDestinationNo
 class WebAudioContext extends AudioContext
 {
   dartWebAudio.AudioContext _dartAudioContext = dartWebAudio.AudioContext();
-
+  String? get state => _dartAudioContext.state;
+  Future resume() => _dartAudioContext.resume();
 
   /// Ctor
   WebAudioContext()

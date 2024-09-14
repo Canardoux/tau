@@ -1,0 +1,27 @@
+[submodule "taudoc"]
+	path = taudoc
+	url = https://github.com/Canardoux/taudoc
+[submodule "flutter_sound"]
+	path = flutter_sound
+	url = https://github.com/Canardoux/flutter_sound
+[submodule "tauwa"]
+	path = tauwa
+	url = git@github.com:Canardoux/tauwa.git
+[submodule "tauwars"]
+	path = tauwars
+	url = git@github.com:canardoux/tauwars.git
+[submodule "tauwaweb"]
+	path = tauwaweb
+	url = git@github.com:Canardoux/tauwaweb.git
+[submodule "tauwalabs"]
+	path = tauwalabs
+	url = git@github.com:Canardoux/tauwalabs.git
+[submodule "taudio"]
+	path = taudio
+	url = git@github.com:Canardoux/taudio.git
+[submodule "lab_sound_bridge"]
+	path = lab_sound_bridge
+	url = git@github.com:canardoux/lab_sound_bridge.git
+[submodule "lab_sound_flutter"]
+	path = lab_sound_flutter
+	url = git@github.com:Canardoux/lab_sound_flutter.git

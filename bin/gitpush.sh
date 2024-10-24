@@ -8,6 +8,13 @@ fi
 
 COMMENT=$1
 
+cd etau
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
 cd taudoc
 git add .
 git commit -m "$COMMENT"

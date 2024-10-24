@@ -19,3 +19,6 @@
 [submodule "taulabs"]
 	path = taulabs
 	url = git@github.com:canardoux/taulabs.git
+[submodule "etau"]
+	path = etau
+	url = https://github.com/canardoux/etau

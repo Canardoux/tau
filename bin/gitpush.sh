@@ -15,7 +15,7 @@ git pull
 git push
 cd ..
 
-cd taudoc
+cd tau_doc
 git add .
 git commit -m "$COMMENT"
 git pull
@@ -29,21 +29,21 @@ git pull
 git push
 cd ..
 
-cd taulabs
+cd tau_labs
 git add .
 git commit -m "$COMMENT"
 git pull
 git push
 cd ..
 
-cd tauwars
+cd tau_wars
 git add .
 git commit -m "$COMMENT"
 git pull
 git push
 cd ..
 
-cd tauweb
+cd tau_web
 git add .
 git commit -m "$COMMENT"
 git pull

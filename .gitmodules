@@ -1,9 +1,9 @@
-[submodule "taudoc"]
-	path = taudoc
-	url = https://github.com/Canardoux/taudoc
-[submodule "tauwars"]
-	path = tauwars
-	url = git@github.com:canardoux/tauwars.git
+[submodule "tau_doc"]
+	path = tau_doc
+	url = https://github.com/Canardoux/tau_doc
+[submodule "tau_wars"]
+	path = tau_wars
+	url = git@github.com:canardoux/tau_wars.git
 [submodule "taudio"]
 	path = taudio
 	url = git@github.com:Canardoux/taudio.git
@@ -13,12 +13,12 @@
 [submodule "lab_sound_flutter"]
 	path = lab_sound_flutter
 	url = git@github.com:Canardoux/lab_sound_flutter.git
-[submodule "tauweb"]
-	path = tauweb
-	url = https://github.com/Canardoux/tauweb
-[submodule "taulabs"]
-	path = taulabs
-	url = git@github.com:canardoux/taulabs.git
+[submodule "tau_web"]
+	path = tau_web
+	url = https://github.com/Canardoux/tau_web
+[submodule "tau_labs"]
+	path = tau_labs
+	url = git@github.com:canardoux/tau_labs.git
 [submodule "etau"]
 	path = etau
 	url = https://github.com/canardoux/etau

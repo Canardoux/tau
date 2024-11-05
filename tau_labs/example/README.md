@@ -1,6 +1,6 @@
-# taulabs_example
+# tau_labs_example
 
-Demonstrates how to use the taulabs plugin.
+Demonstrates how to use the tau_labs plugin.
 
 ## Getting Started
 

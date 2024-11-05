@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "xyz.canardoux" "\0"
-            VALUE "FileDescription", "taulabs_example" "\0"
+            VALUE "FileDescription", "tau_labs_example" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "taulabs_example" "\0"
+            VALUE "InternalName", "tau_labs_example" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 xyz.canardoux. All rights reserved." "\0"
-            VALUE "OriginalFilename", "taulabs_example.exe" "\0"
-            VALUE "ProductName", "taulabs_example" "\0"
+            VALUE "OriginalFilename", "tau_labs_example.exe" "\0"
+            VALUE "ProductName", "tau_labs_example" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

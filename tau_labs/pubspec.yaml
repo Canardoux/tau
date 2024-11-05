@@ -1,4 +1,4 @@
-name: taulabs
+name: tau_labs
 description: "A τ implementation as a wrapper around the Lab Sound library"
 version: 0.0.1
 homepage:

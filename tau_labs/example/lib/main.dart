@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:taulabs/taulabs.dart' as taulabs;
+import 'package:tau_labs/tau_labs.dart' as tau_labs;
 
 void main() {
   runApp(const MyApp());
@@ -21,8 +21,8 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    sumResult = taulabs.sum(1, 2);
-    sumAsyncResult = taulabs.sumAsync(3, 4);
+    sumResult = tau_labs.sum(1, 2);
+    sumAsyncResult = tau_labs.sumAsync(3, 4);
   }
 
   @override

@@ -4,7 +4,7 @@ import 'dart:ffi';
 import 'dart:io';
 import 'dart:isolate';
 
-import 'taulabs_bindings_generated.dart';
+import 'tau_labs_bindings_generated.dart';
 
 /// A very short-lived native function.
 ///
@@ -33,7 +33,7 @@ Future<int> sumAsync(int a, int b) async {
   return completer.future;
 }
 
-const String _libName = 'taulabs';
+const String _libName = 'tau_labs';
 
 /// The dynamic library in which the symbols for [TaulabsBindings] can be found.
 final DynamicLibrary _dylib = () {

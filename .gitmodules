@@ -1,6 +1,6 @@
 [submodule "tau_doc"]
 	path = tau_doc
-	url = https://github.com/larpoux/tau_doc
+	url = git@github.com:Larpoux/tau_doc.git
 [submodule "tau_wars"]
 	path = tau_wars
 	url = git@github.com:canardoux/tau_wars.git

@@ -18,7 +18,7 @@
 	url = https://github.com/Canardoux/tau_web
 [submodule "tau_labs"]
 	path = tau_labs
-	url = git@github.com:canardoux/tau_labs.git
+	url = https://github.com/Canardoux/tau_labs
 [submodule "etau"]
 	path = etau
 	url = https://github.com/canardoux/etau

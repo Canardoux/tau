@@ -18,7 +18,7 @@ The coresponding repos are:
 - [taudio](https://github.com/Canardoux/taudio)
 - [tau_web](https://github.com/Canardoux/tau_web)
 - [Flutter_Sound v9.x](https://github.com/Canardoux/flutter_sound)
-- [tau_labs](https://github.com/Canardoux/flutter_sound)
+- [tau_labs](https://github.com/Canardoux/tau_labs)
 - [tau_wars](https://github.com/Canardoux/tau_wars)
 
 If you need the sources, you probably want to use the `--recursive` option : 

@@ -2,14 +2,15 @@
 
 The τ Project is a set of submodules that offer A Web Audio API interface for Flutter.
 
-The τ Project is composed with the following modules:
+The τ Project is composed with the following modules :
 
+- [τ](https://tau-doc.canardoux.xyz/README.html)
 - [E_τ](https://tau-doc.canardoux.xyz/etau_README.html)
 - [τ_Dio](https://tau-doc.canardoux.xyz/taudio_README.html)
 - [τ_Web](https://tau-doc.canardoux.xyz/tauweb_README.html)
 - [τ_Labs](https://tau-doc.canardoux.xyz/taulabs_README.html)
 - [τ_Wars](https://tau-doc.canardoux.xyz/tauwars_README.html)
-- [Flutter Sound](https://tau-doc.canardoux.xyz/fs_README.html)
+- [Flutter Sound v9.x](https://tau-doc.canardoux.xyz/fs_README.html)
 
 The coresponding repos are:
 
@@ -19,10 +20,10 @@ The coresponding repos are:
 - [tau_web](https://github.com/Canardoux/tau_web)
 - [tau_labs](https://github.com/Canardoux/tau_labs)
 - [tau_wars](https://github.com/Canardoux/tau_wars)
-- [Flutter_Sound v9.x](https://github.com/Canardoux/flutter_sound)
+- [flutter_sound](https://github.com/Canardoux/flutter_sound)
 
 If you need the sources, you probably want to use the `--recursive` option : 
 ```sh
-git clone --recursive https://github.com/Canardoux/tau
-git clone --recursive https://github.com/Canardoux/flutter_sound
+git clone --recursive https://github.com/canardoux/tau
+git clone --recursive https://github.com/canardoux/flutter_sound
 ```

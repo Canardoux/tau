@@ -21,3 +21,8 @@ fi
         cd tau_web
         bin/reldev.sh "$1"
         cd ..
+        
+
+        cd tau_wars
+        bin/reldev.sh "$1"
+        cd ..

@@ -10,9 +10,6 @@
 [submodule "lab_sound_bridge"]
 	path = lab_sound_bridge
 	url = git@github.com:canardoux/lab_sound_bridge.git
-[submodule "lab_sound_flutter"]
-	path = lab_sound_flutter
-	url = git@github.com:Canardoux/lab_sound_flutter.git
 [submodule "tau_web"]
 	path = tau_web
 	url = https://github.com/Canardoux/tau_web
@@ -22,3 +19,6 @@
 [submodule "etau"]
 	path = etau
 	url = https://github.com/canardoux/etau
+[submodule "tau_chrome"]
+	path = tau_chrome
+	url = git@github.com:Canardoux/tau_chrome.git

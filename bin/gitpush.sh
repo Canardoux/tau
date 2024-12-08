@@ -15,6 +15,13 @@ git pull
 git push
 cd ..
 
+cd tau_chrome
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
 cd tau_doc
 git add .
 git commit -m "$COMMENT"

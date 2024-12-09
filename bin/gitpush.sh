@@ -57,14 +57,14 @@ git pull
 git push
 cd ..
 
-cd lab_sound_bridge
+cd tau_core
 git add .
 git commit -m "$COMMENT"
 git pull
 git push
 cd ..
 
-cd lab_sound_flutter
+cd tau_ffi
 git add .
 git commit -m "$COMMENT"
 git pull

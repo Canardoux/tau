@@ -7,9 +7,6 @@
 [submodule "taudio"]
 	path = taudio
 	url = git@github.com:Canardoux/taudio.git
-[submodule "lab_sound_bridge"]
-	path = lab_sound_bridge
-	url = git@github.com:canardoux/lab_sound_bridge.git
 [submodule "tau_web"]
 	path = tau_web
 	url = https://github.com/Canardoux/tau_web
@@ -22,3 +19,9 @@
 [submodule "tau_chrome"]
 	path = tau_chrome
 	url = git@github.com:Canardoux/tau_chrome.git
+[submodule "tau_ffi"]
+	path = tau_ffi
+	url = git@github.com:Canardoux/tau_ffi.git
+[submodule "tau_core"]
+	path = tau_core
+	url = git@github.com:Canardoux/tau_core.git

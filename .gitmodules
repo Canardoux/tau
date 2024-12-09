@@ -10,9 +10,6 @@
 [submodule "tau_web"]
 	path = tau_web
 	url = https://github.com/Canardoux/tau_web
-[submodule "tau_labs"]
-	path = tau_labs
-	url = https://github.com/Canardoux/tau_labs
 [submodule "etau"]
 	path = etau
 	url = https://github.com/canardoux/etau

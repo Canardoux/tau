@@ -36,13 +36,6 @@ git pull
 git push
 cd ..
 
-cd tau_labs
-git add .
-git commit -m "$COMMENT"
-git pull
-git push
-cd ..
-
 cd tau_wars
 git add .
 git commit -m "$COMMENT"

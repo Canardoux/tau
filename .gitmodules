@@ -4,9 +4,6 @@
 [submodule "tau_wars"]
 	path = tau_wars
 	url = git@github.com:canardoux/tau_wars.git
-[submodule "taudio"]
-	path = taudio
-	url = git@github.com:Canardoux/taudio.git
 [submodule "tau_web"]
 	path = tau_web
 	url = https://github.com/Canardoux/tau_web

@@ -8,6 +8,34 @@ fi
 
 COMMENT=$1
 
+cd flutter_sound
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
+cd flutter_sound_wev
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
+cd flutter_sound core
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
+cd flutter_soundPlateform_interface
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
 cd etau
 git add .
 git commit -m "$COMMENT"

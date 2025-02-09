@@ -19,3 +19,18 @@
 [submodule "tau_core"]
 	path = tau_core
 	url = git@github.com:Canardoux/tau_core.git
+[submodule "taudio"]
+	path = taudio
+	url = git@github.com:Canardoux/taudio.git
+[submodule "flutter_sound"]
+	path = flutter_sound
+	url = git@github.com:Canardoux/flutter_sound.git
+[submodule "flutter_sound_core"]
+	path = flutter_sound_core
+	url = git@github.com:Canardoux/flutter_sound_core.git
+[submodule "flutter_sound_web"]
+	path = flutter_sound_web
+	url = git@github.com:Canardoux/flutter_sound_web.git
+[submodule "flutter_sound_platform_interface"]
+	path = flutter_sound_platform_interface
+	url = git@github.com:Canardoux/flutter_sound_platform_interface.git

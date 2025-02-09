@@ -22,7 +22,10 @@ fi
         bin/reldev.sh "$1"
         cd ..
         
-
-        cd tau_wars
+        cd flutter_sound
         bin/reldev.sh "$1"
         cd ..
+
+        #cd tau_war
+        #bin/reldev.sh "$1"
+        #cd ..

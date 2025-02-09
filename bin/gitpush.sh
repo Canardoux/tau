@@ -32,7 +32,7 @@ git pull
 git push
 cd ..
 
-echo '==========> flutter_sound_plateform_interface'
+echo '==========> flutter_sound_platform_interface'
 cd flutter_sound_plateform_interface
 git add .
 git commit -m "$COMMENT"

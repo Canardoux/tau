@@ -7,6 +7,7 @@ fi
 
 
 COMMENT=$1
+# ================================== Flutter Sound ================================
 
 echo '==========> flutter_sound'
 cd flutter_sound
@@ -40,6 +41,8 @@ git pull
 git push
 cd ..
 
+# =================================== Etau ========================================
+
 echo '==========> etau'
 cd etau
 git add .
@@ -48,13 +51,24 @@ git pull
 git push
 cd ..
 
-echo '==========> tau_chrome'
-cd tau_chrome
+
+echo '==========> tau_war'
+cd tau_war
 git add .
 git commit -m "$COMMENT"
 git pull
 git push
 cd ..
+
+echo '==========> tau_web'
+cd tau_web
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
+# =============================== Tau_doc and Taudio ========================
 
 echo '==========> tau_doc'
 cd tau_doc
@@ -72,37 +86,7 @@ git pull
 git push
 cd ..
 
-echo '==========> tau_wars'
-cd tau_wars
-git add .
-git commit -m "$COMMENT"
-git pull
-git push
-cd ..
-
-echo '==========> tau_web'
-cd tau_web
-git add .
-git commit -m "$COMMENT"
-git pull
-git push
-cd ..
-
-echo '==========> tau_core'
-cd tau_core
-git add .
-git commit -m "$COMMENT"
-git pull
-git push
-cd ..
-
-echo '==========> tau_ffi'
-cd tau_ffi
-git add .
-git commit -m "$COMMENT"
-git pull
-git push
-cd ..
+# ================================= Tau ============================
 
 echo '==========> tau'
 git add .

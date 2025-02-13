@@ -18,14 +18,12 @@ fi
         bin/reldev.sh "$1"
         cd ..
 
-        cd tau_web
-        bin/reldev.sh "$1"
-        cd ..
-        
         cd flutter_sound
         bin/reldev.sh "$1"
         cd ..
 
-        #cd tau_war
-        #bin/reldev.sh "$1"
-        #cd ..
+        cd taudio
+        bin/reldev.sh "$1"
+        cd ..
+
+ 

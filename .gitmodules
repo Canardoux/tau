@@ -4,9 +4,6 @@
 [submodule "tau_wars"]
 	path = tau_wars
 	url = git@github.com:canardoux/tau_wars.git
-[submodule "tau_web"]
-	path = tau_web
-	url = https://github.com/Canardoux/tau_web
 [submodule "etau"]
 	path = etau
 	url = https://github.com/canardoux/etau
@@ -34,9 +31,18 @@
 [submodule "flutter_sound_platform_interface"]
 	path = flutter_sound_platform_interface
 	url = git@github.com:Canardoux/flutter_sound_platform_interface.git
-[submodule "tau_war"]
-	path = tau_war
-	url = git@github.com:Canardoux/tau_war.git
-[submodule "tau_webkit"]
-	path = tau_webkit
-	url = git@github.com:Canardoux/tau_webkit.git
+[submodule "etau-doc"]
+	path = etau-doc
+	url = git@github.com:Canardoux/etau-doc.git
+[submodule "tauwar-doc"]
+	path = tauwar-doc
+	url = git@github.com:Canardoux/tauwar-doc.git
+[submodule "tauweb-doc"]
+	path = tauweb-doc
+	url = git@github.com:Canardoux/tauweb-doc.git
+[submodule "tauwar"]
+	path = tauwar
+	url = git@github.com:Canardoux/tauwar.git
+[submodule "tauweb"]
+	path = tauweb
+	url = git@github.com:Canardoux/tauweb.git

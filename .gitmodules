@@ -1,21 +1,12 @@
-[submodule "tau_doc"]
-	path = tau_doc
-	url = git@github.com:Larpoux/tau_doc.git
-[submodule "tau_wars"]
-	path = tau_wars
-	url = git@github.com:canardoux/tau_wars.git
+[submodule "tauwar"]
+	path = tauwar
+	url = git@github.com:canardoux/tauwar.git
+[submodule "tauweb"]
+	path = tauweb
+	url = git@github.com:canardoux/tauweb.git
 [submodule "etau"]
 	path = etau
 	url = https://github.com/canardoux/etau
-[submodule "tau_chrome"]
-	path = tau_chrome
-	url = git@github.com:Canardoux/tau_chrome.git
-[submodule "tau_ffi"]
-	path = tau_ffi
-	url = git@github.com:Canardoux/tau_ffi.git
-[submodule "tau_core"]
-	path = tau_core
-	url = git@github.com:Canardoux/tau_core.git
 [submodule "taudio"]
 	path = taudio
 	url = git@github.com:Canardoux/taudio.git
@@ -40,9 +31,9 @@
 [submodule "tauweb-doc"]
 	path = tauweb-doc
 	url = git@github.com:Canardoux/tauweb-doc.git
-[submodule "tauwar"]
-	path = tauwar
-	url = git@github.com:Canardoux/tauwar.git
-[submodule "tauweb"]
-	path = tauweb
-	url = git@github.com:Canardoux/tauweb.git
+[submodule "fs-doc"]
+	path = fs-doc
+	url = git@github.com:Larpoux/fs-doc.git
+[submodule "etau-doc"]
+	path = etau-doc
+	url = git@github.com:Larpoux/etau-doc.git

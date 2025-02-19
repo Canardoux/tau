@@ -53,7 +53,7 @@ cd ..
 
 
 echo '==========> tau_war'
-cd tau_war
+cd tauwar
 git add .
 git commit -m "$COMMENT"
 git pull
@@ -61,22 +61,15 @@ git push
 cd ..
 
 echo '==========> tau_web'
-cd tau_web
+cd tauweb
 git add .
 git commit -m "$COMMENT"
 git pull
 git push
 cd ..
 
-# =============================== Tau_doc and Taudio ========================
+# =================================== Taudio ========================================
 
-echo '==========> tau_doc'
-cd tau_doc
-git add .
-git commit -m "$COMMENT"
-git pull
-git push
-cd ..
 
 echo '==========> taudio'
 cd taudio
@@ -86,10 +79,58 @@ git pull
 git push
 cd ..
 
+
+
+# =============================== The docs ========================
+
+echo '==========> fs-doc'
+cd fs-doc
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
+
+echo '==========> taudio-doc'
+cd taudio-doc
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
+
+echo '==========> etau-doc'
+cd etau-doc
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
+
+
+echo '==========> tauwar-doc'
+cd tauwar-doc
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
+
+echo '==========> tauweb-doc'
+cd tauweb-doc
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
 # ================================= Tau ============================
 
 echo '==========> tau'
-git add .
 git commit -m "$COMMENT"
 git pull
 git push

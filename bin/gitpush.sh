@@ -111,26 +111,10 @@ cd ..
 
 
 
-echo '==========> tauwar-doc'
-cd tauwar-doc
-git add .
-git commit -m "$COMMENT"
-git pull
-git push
-cd ..
-
-
-echo '==========> tauweb-doc'
-cd tauweb-doc
-git add .
-git commit -m "$COMMENT"
-git pull
-git push
-cd ..
-
 # ================================= Tau ============================
 
 echo '==========> tau'
+git add .
 git commit -m "$COMMENT"
 git pull
 git push

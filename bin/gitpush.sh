@@ -114,6 +114,7 @@ cd ..
 # ================================= Tau ============================
 
 echo '==========> tau'
+git add .
 git commit -m "$COMMENT"
 git pull
 git push

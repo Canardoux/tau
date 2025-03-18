@@ -53,7 +53,7 @@ cd ..
 
 
 echo '==========> tau_war'
-cd tauwar
+cd tau_war
 git add .
 git commit -m "$COMMENT"
 git pull
@@ -61,7 +61,7 @@ git push
 cd ..
 
 echo '==========> tau_web'
-cd tauweb
+cd tau_web
 git add .
 git commit -m "$COMMENT"
 git pull

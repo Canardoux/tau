@@ -46,9 +46,9 @@
 [submodule "taudio-doc"]
 	path = taudio-doc
 	url = git@github.com:Canardoux/taudio-doc.git
-[submodule "tauwar"]
-	path = tauwar
-	url = git@github.com:Canardoux/tauwar.git
-[submodule "tauweb"]
-	path = tauweb
-	url = git@github.com:Canardoux/tauweb.git
+[submodule "tau_web"]
+	path = tau_web
+	url = git@github.com:Canardoux/tau_web.git
+[submodule "tau_war"]
+	path = tau_war
+	url = git@github.com:canardoux/tau_war.git

@@ -52,3 +52,9 @@
 [submodule "tau_war"]
 	path = tau_war
 	url = git@github.com:canardoux/tau_war.git
+[submodule "tau_labs"]
+	path = tau_labs
+	url = git@github.com:canardoux/tau_labs.git
+[submodule "tau_bridge"]
+	path = tau_bridge
+	url = git@github.com:canardoux/tau_bridge.git

@@ -68,13 +68,6 @@ git pull
 git push
 cd ..
 
-echo '==========> tau_bridge'
-cd tau_bridge
-git add .
-git commit -m "$COMMENT"
-git pull
-git push
-cd ..
 
 # =================================== Taudio ========================================
 

@@ -68,6 +68,15 @@ git pull
 git push
 cd ..
 
+echo '==========> tau_labs'
+cd tau_labs
+git add .
+git commit -m "$COMMENT"
+git pull
+git push
+cd ..
+
+
 
 # =================================== Taudio ========================================
 
